@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khai báo biến</title>
+</head>
+
+<body>
+    <script>
+        //1. khai báo biến
+        var age;
+        //1st --> sai --> bắt đầu là ký tự số
+        //$student --> Đúng
+        //student Name --> Sai --> chứa ký tự đặc biệt (space)
+        //student4Name --> Đúng
+        //studentname --> Đúng --> không nên đặt (studentName)
+        //var --> Sai --> trùng từ khóa javascript
+        // Khai báo biến: let | var | const variableName
+        //-Khai báo biến chứa giá trị tên sinh viên
+        let studentName;
+        console.log("Giá trị biến studentName trước khi khởi tạo--->", studentName);
+        // var studentName;
+        // const studentName;
+        //-Khởi tạo giá trị cho biến: variableName = value
+        studentName = "Nguyễn Văn A";
+        console.log("Giá trị biến studentName sau khi khởi tạo--->", studentName);
+        //-Khai báo và khởi tạo giá trị cho biến chứa dữ liệu mã sinh viên
+        // let | var | const variableName = value;
+        let studentId = "SV001";
+        console.log("Giá trị biến studentId sau khi khai báo và khởi tạo--->", studentId);
+        // Gán lại giá trị cho biến studentName là Nguyễn Văn B
+        studentName = "Nguyễn Văn B";
+        console.log("Giá trị biến studentName sau khi gán lại giá trị --->", studentName);
+        // Phân biệt let | var | const
+        /*
+            1. var
+                - Có phạm vi là global hoặc local (biến toàn cục hoặc biến cục bộ)
+                - Có thể khai báo lại và gán lại giá trị
+                - hoisting: Khi chạy chương trình, ứng dụng sẽ quét tất cả khai báo là var,
+                cho phép khai báo trước và nạp vào bộ nhớ
+            2. let
+                - Có phạm vi khối lệnh (block scope)
+                - Không thể khai báo lại nhưng có thể gán lại giá trị
+                - Không có hoisting
+            3. const - hằng số
+                - Có phạm vi trong khối lệnh
+                - Không thể khai báo lại và không thể gán lại giá trị
+                - Không có hoisting
+        */
+
+        console.log("Giá trị tuổi sinh viên là:", age);//hoisting = 1+ 2
+        // Khai báo biến bằng var
+        // var age = 20; 
+        // 2. Khởi tạo giá trị cho biến
+        age = 20;
+        var age = 22;//Khai báo lại
+        age = 23;//Gán lại
+        // Khai báo biến bằng let        
+        {
+            //Block Statement
+            // console.log("mark trước khi khai báo--->", mark);//Không hoisting
+            let mark = 8;// block scope
+            console.log("mark trong khối lệnh--->", mark);
+        }
+        // console.log("mark ngoài khối lệnh-->", mark);
+        let a = 10;
+        //let a = 20;//Không thể khai báo lại
+        a = 20;//Có thể gán lại giá trị
+        // Khai báo biến bằng const - hằng số - tên biến viết hoa hết
+        // console.log("Giá trị PI trước khai báo --->", PI);//Không hoisting
+        const PI = 3.14;
+        // const PI = 10;//Không khai báo lại được
+        // PI = 5;//Không gán lại giá trị được
+        console.log("Giá trị PI sau khi gán giá trị--->", PI);
+        // var | let | const variableName = value;
+        /*
+            Bài tập ứng dụng:
+            Khai báo các biến theo chuẩn quy tắc đặt tên
+            1. Khai báo biến mã sinh viên và tên sinh viên với từ khóa var
+            2. Khởi tạo giá trị cho biến mã sinh viên là "S001", 
+            tên sinh viên là "Nguyễn Thanh Bình Phước"
+            3. Khai báo và khởi tạo giá trị cho biến tuổi sinh viên có giá trị 20, 
+            giới tính có giá trị là true, địa chỉ có giá trị là "TP.HCM"
+            4. Sử dụng console.log() in ra giá trị các biến
+        */
+
+
+
+
+    </script>
+</body>
+
+</html>

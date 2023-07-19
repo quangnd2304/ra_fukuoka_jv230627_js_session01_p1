@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cách viết javascript</title>
+</head>
+
+<body>
+    <!-- C1: Inline - viết mã javascipt trong thẻ html -->
+    <button onclick="alert('Xin chào các bạn lớp Fukuoka - JV230627')">Inline</button>
+    <!-- C2: Internal - viết mã javascript trong file html -->
+    <button id="internal">Internal</button>
+    <script>
+        // Chứa các mã javascript internal
+        let internal = document.getElementById("internal");
+        internal.onclick = function () {
+            alert("Chúng em thấy thầy Phước rất đẹp zai");
+        }
+    </script>
+    <!-- C3: External - viết mã javascript ra file js, nhúng vào html thông qua thẻ script -->
+    <button id="external">External</button>
+    <!-- Nhúng js vào html -->
+    <script src="./js/demo.js"></script>
+    <!-- Bài tập ứng dụng
+        1. Xây dựng button "Đẹp zai", sử dụng cách viến inline để hiển thị thông báo: 
+        Thầy Phước đẹp zai
+        2. Xây dựng button "Lợn hồng", sử dụng cách viêt internal để hiển thị thông báo:
+        Thầy Phước thích lợn hồng
+        3. Xây dựng button "Thành công", sử dụng cách viết external để hiển thị thông báo:
+        Thầy Phước sẽ cùng các em thành công
+    -->
+</body>
+
+</html>
